@@ -44,5 +44,5 @@ node server/index.js
 
 ## Git branches
 
-Nobody should be posh to the "main" branch.
+Nobody should be push to the "main" branch.
 everybody should create a new branch with a number and a meaning full name and after code review, we can merge the code.
