@@ -10,6 +10,16 @@
 
 ## Install
 
+Create .env file and past login credentials in this file.
+
+```
+PG_USER=""
+PG_HOST=""
+PG_DB=""
+PG_PASS=""
+PG_PORT=
+```
+
 ```
 npm i
 ```
@@ -46,3 +56,12 @@ node server/index.js
 
 Nobody should be push to the "main" branch.
 everybody should create a new branch with a number and a meaning full name and after code review, we can merge the code.
+
+## troubleshot
+
+if you get a issue about "SWR " you can try :
+
+```
+npm i
+
+```

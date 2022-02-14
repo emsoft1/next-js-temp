@@ -1,11 +1,12 @@
-process.env.ENV_VARIABLE;
+
+
 const Pool = require("pg").Pool;
 const pool = new Pool({
-    user: env.pg.user,
-    host: env.pg.host,
-    database: env.pg.db,
-    password: env.pg.pass,
-    port: env.pg.port,
+    user: process.env.PG_USER,
+    host: process.env.PG_HOST,
+    database: process.env.PG_DB,
+    password: process.env.PG_PASS,
+    port: process.env.PG_PORT,
 });
 
 module.exports.checkDb = () => {

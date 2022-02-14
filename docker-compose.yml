@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+    server:
+        image: zoolbiaserver001 # name of docker container
+        build: .
+        ports:
+            - "3000:3000"
+            - "5051:5051"
+        environment:
+            PG_USER: ${PG_USER}
+            PG_HOST: ${PG_HOST}
+            PG_DB: ${PG_DB}
+            PG_PASS: ${PG_PASS}
+            PG_PORT: ${PG_PORT}
+    db:
+        image: "postgres"
+        # ports:
+        #     - "4321:5432"
+        environment:
+            POSTGRES_PASSWORD: ${PG_PASS}
+            POSTGRES_USER: ${PG_USER}
+        volumes:
+            - data:/var/lib/postgresql/data
+
+volumes:
+    data:
